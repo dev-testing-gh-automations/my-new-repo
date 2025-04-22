@@ -1,0 +1,20 @@
+name: Test Check
+
+on:
+  push:
+    branches:
+      - main  # Change this to your branch if needed
+  pull_request:
+    branches:
+      - main  # Change this to your branch if needed
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Run a simple test
+        run: echo "Test check is running!"
